@@ -1,0 +1,48 @@
+package main
+import (
+	"fmt";
+	"math"
+)
+type Circle struct{
+	x, y, r float64
+}
+func calculateArea(c *Circle) float64{
+	return math.Pi * c.r * c.r
+}
+type Rectangle struct {
+	x1, y1, x2, y2 float64
+}
+func (r* Rectangle) perimeter() float64 {
+	return r.x1 + r.y1 + r.x2 + r.y2
+}
+type Person struct {
+	Name string
+}
+func (p* Person) Talk() {
+	fmt.Println("Hi, my name is ",p.Name)
+}
+type Android struct {
+	Person
+	Model string
+}
+func main(){
+	var c Circle
+	fmt.Println(c)
+
+	cir := Circle{1, 2, 5}
+	fmt.Println(cir)
+	fmt.Println(cir.x, " - ", cir.y, " - ", cir.r)
+
+	fmt.Println(calculateArea(&cir))
+
+	r := Rectangle{0, 0, 10, 10}
+	fmt.Println(r.perimeter())
+
+	a := &Android{
+		Person: Person{"John"},
+		Model: "Xiaomi",
+	}
+	fmt.Println(a)
+	a.Talk()
+	a.Person.Talk()
+}
