@@ -1,3 +1,4 @@
+// Excersize for the struct tutorial
 package speed
 
 // TODO: define the 'Car' type struct
