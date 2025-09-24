@@ -1,3 +1,4 @@
+// Excersize for characters 
 class SqueakyClean {
     static String clean(String identifier) {
         StringBuilder cleanedIdentifier = new StringBuilder();
