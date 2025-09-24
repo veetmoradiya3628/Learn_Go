@@ -1,3 +1,4 @@
+// Class
 public class JedliksToyCar {
     private int batteryPercentage;
     private int distanceTravelled;
